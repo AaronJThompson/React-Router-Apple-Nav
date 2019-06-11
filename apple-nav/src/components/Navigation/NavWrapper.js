@@ -10,6 +10,8 @@ const StyledNavBar = styled.header`
         max-width: 980px;
         margin: 0 auto;
         height: 100%;
+        display:flex;
+        justify-content: space-between;
     }
 `;
 
@@ -18,7 +20,7 @@ export default class NavWrapper extends React.Component {
         return (
             <StyledNavBar>
                 <nav>
-                    
+
                 </nav>
             </StyledNavBar>
         )

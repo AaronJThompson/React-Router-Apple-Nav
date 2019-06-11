@@ -23,12 +23,11 @@ const StyledNavBar = styled.header`
 const StyledSubNavBar = styled.div`
     width:100%;
     max-width: 950px;
-    height: 12rem;
+    height: 8rem;
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
     align-items: center;
-
 `;
 
 export default class NavWrapper extends React.Component {

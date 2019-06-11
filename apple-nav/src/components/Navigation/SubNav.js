@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const NavIcon = styled.div`
     display: inline-block;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     background-image: url(${props => props.icon || ""});
     background-size:contain;
     background-repeat: no-repeat;
@@ -14,6 +14,15 @@ const NavIcon = styled.div`
 const StyledLink = styled(Link)`
     font-size:0.7rem;
     text-align: center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+        color: blue;
+    }
 `;
 export default function SubNav(props) {
     const { path, label, icon } = props;

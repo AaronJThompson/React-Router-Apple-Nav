@@ -1,11 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledNavBar = styled.header`
+    width: 100%;
+    height: 3rem;
+    background: rgba(45,45,45,0.98);
+    nav{
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+        height: 100%;
+    }
+`;
 
 export default class NavWrapper extends React.Component {
     render() {
         return (
-            <div>
-                I am the navigation
-            </div>
+            <StyledNavBar>
+                <nav>
+                    
+                </nav>
+            </StyledNavBar>
         )
     }
 }

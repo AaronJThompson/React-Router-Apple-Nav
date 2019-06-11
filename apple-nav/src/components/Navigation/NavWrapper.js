@@ -18,15 +18,15 @@ const StyledNavBar = styled.header`
 
 export default class NavWrapper extends React.Component {
     render() {
+        const { screens } = this.props;
         return (
             <StyledNavBar>
                 <nav>
-                    <Nav path='/' label='Nav 1'/>
-                    <Nav path='/' label='Nav 2'/>
-                    <Nav path='/' label='Nav 3'/>
-                    <Nav path='/' label='Nav 4'/>
-                    <Nav path='/' label='Nav 5'/>
-                    <Nav path='/' label='Nav 6'/>
+                    {
+                        screens.map(screen => {
+                            return <Nav path={screen.path} label={screen.name} />
+                        })
+                    }
                 </nav>
             </StyledNavBar>
         )

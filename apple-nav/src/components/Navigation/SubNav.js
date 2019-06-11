@@ -6,6 +6,6 @@ export default function SubNav(props) {
     const { path, label } = props;
 
     return (
-        <Link to={path}>label</Link>
+        <Link to={path}>{label}</Link>
     )
 }

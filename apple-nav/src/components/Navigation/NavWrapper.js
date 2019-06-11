@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Nav from './Nav';
+import { Route } from 'react-router-dom';
+import SubNav from './SubNav';
+
+
 const StyledNavBar = styled.header`
     width: 100%;
     height: 3rem;
@@ -17,6 +21,11 @@ const StyledNavBar = styled.header`
 `;
 
 export default class NavWrapper extends React.Component {
+
+    getSubScreens = (path) => {
+        return this.props.screens.find((screen) => `/${path}` === screen.path).subScreens
+    }
+
     render() {
         const { screens } = this.props;
         return (
@@ -28,6 +37,16 @@ export default class NavWrapper extends React.Component {
                         })
                     }
                 </nav>
+                <Route path='/:product' render={pr => {
+                    let subScreens = this.getSubScreens(pr.match.params.product);
+                    return (
+                        <div>
+                            {
+                                subScreens.map(screen => <SubNav path={screen.path} label={screen.name} />)
+                            }
+                        </div>
+                    )
+                }}/>
             </StyledNavBar>
         )
     }

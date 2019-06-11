@@ -22,8 +22,8 @@ const StyledNavBar = styled.header`
 
 const StyledSubNavBar = styled.div`
     width:100%;
-    max-width: 850px;
-    height: 5rem;
+    max-width: 950px;
+    height: 12rem;
     margin: 0 auto;
     display:flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@ export default class NavWrapper extends React.Component {
                     return (
                         <StyledSubNavBar>
                             {
-                                subScreens.map(screen => <SubNav path={screen.path} label={screen.name} />)
+                                subScreens.map(screen => <SubNav path={screen.path} label={screen.name} icon={screen.icon} />)
                             }
                         </StyledSubNavBar>
                     )

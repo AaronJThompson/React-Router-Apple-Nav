@@ -20,6 +20,17 @@ const StyledNavBar = styled.header`
     }
 `;
 
+const StyledSubNavBar = styled.div`
+    width:100%;
+    max-width: 850px;
+    height: 5rem;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+`;
+
 export default class NavWrapper extends React.Component {
 
     getSubScreens = (path) => {
@@ -39,12 +50,14 @@ export default class NavWrapper extends React.Component {
                 </nav>
                 <Route path='/:product' render={pr => {
                     let subScreens = this.getSubScreens(pr.match.params.product);
+                    if (!subScreens)
+                        return null;
                     return (
-                        <div>
+                        <StyledSubNavBar>
                             {
                                 subScreens.map(screen => <SubNav path={screen.path} label={screen.name} />)
                             }
-                        </div>
+                        </StyledSubNavBar>
                     )
                 }}/>
             </StyledNavBar>

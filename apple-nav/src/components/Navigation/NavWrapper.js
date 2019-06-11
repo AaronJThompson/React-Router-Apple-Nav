@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Nav from './Nav';
 const StyledNavBar = styled.header`
     width: 100%;
     height: 3rem;
@@ -12,6 +12,7 @@ const StyledNavBar = styled.header`
         height: 100%;
         display:flex;
         justify-content: space-between;
+        align-items: center;
     }
 `;
 
@@ -20,7 +21,12 @@ export default class NavWrapper extends React.Component {
         return (
             <StyledNavBar>
                 <nav>
-
+                    <Nav path='/' label='Nav 1'/>
+                    <Nav path='/' label='Nav 2'/>
+                    <Nav path='/' label='Nav 3'/>
+                    <Nav path='/' label='Nav 4'/>
+                    <Nav path='/' label='Nav 5'/>
+                    <Nav path='/' label='Nav 6'/>
                 </nav>
             </StyledNavBar>
         )

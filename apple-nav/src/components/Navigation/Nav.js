@@ -13,6 +13,6 @@ export default function Nav(props) {
     const { path, label } = props;
 
     return (
-
+        <StyledLink to={path}>{label}</StyledLink>
     )
 } 

@@ -33,7 +33,8 @@ const StyledSubNavBar = styled.div`
 export default class NavWrapper extends React.Component {
 
     getSubScreens = (path) => {
-        return this.props.screens.find((screen) => `/${path}` === screen.path).subScreens
+        if (this.props.screens)
+            return (this.props.screens.find((screen) => `/${path}` === screen.path) || {}).subScreens
     }
 
     render() {

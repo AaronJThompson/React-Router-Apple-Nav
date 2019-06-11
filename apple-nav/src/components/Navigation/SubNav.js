@@ -10,6 +10,7 @@ const NavIcon = styled.div`
     background-size:contain;
     background-repeat: no-repeat;
     background-position-x: 50%;
+    background-position-y: bottom;
 `;
 const StyledLink = styled(Link)`
     font-size:0.7rem;
